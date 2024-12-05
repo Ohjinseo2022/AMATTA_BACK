@@ -1,0 +1,16 @@
+package com.amatta.scheduler.amatta_back.security;
+
+
+import org.springframework.data.domain.AuditorAware;
+import org.springframework.stereotype.Component;
+
+import java.util.Optional;
+
+@Component
+public class SpringSecurityAuditorAware implements AuditorAware<String> {
+
+    @Override
+    public Optional<String> getCurrentAuditor() {
+        return Optional.of("system"); //TODO: 로그인 유저 체크해서 해당 정보가 입력들어갈수 있게 처리해야함
+    }
+}

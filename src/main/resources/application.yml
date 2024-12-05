@@ -1,0 +1,63 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /services/backend
+spring:
+  # ?? ?? ?????
+
+  #  h2:
+  #    console:
+  #      enabled: true # H2 Console ?? ??
+  #      path: /h2-console # H2 Console ?? ??
+  #  datasource:
+  #    driver-class-name: org.h2.Driver
+  ##    url: 'jdbc:h2:tcp://localhost/~/witn'
+  #    url: 'jdbc:h2:mem:witn'
+  #    username: sa
+  #    password:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://124.63.21.91:10002/witn
+    username: postgres
+    password: postgreswitn # ?? ???? ??? ??
+
+  jpa:
+    #    database-platform: org.hibernate.dialect.H2Dialect
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    database: postgresql
+    hibernate:
+      ddl-auto: update        # DB ??? ?? (none, create, create-drop, update, validate)
+    open-in-view: false
+    properties:
+      hibernate:
+        #        dialect: org.hibernate.dialect.H2Dialect
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true      # ?? ?? ?? (??)
+        show_sql: true        # ?? ?? ??
+    show-sql: true
+
+  config:
+    import:
+      classpath:/private/application-security.yml
+  sql:
+    init:
+      platform: postgres
+logging:
+  level:
+    root: info # debug info
+    jdbc:
+      audit: OFF
+      resultset: OFF
+      resultsettable: INFO
+      sqlonly: OFF
+
+#  profiles:
+#    include: security
+
+
+
+springdoc:
+  swagger-ui:
+    path: /swagger/docs
+
+
