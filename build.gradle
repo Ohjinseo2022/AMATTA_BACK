@@ -78,6 +78,9 @@ dependencies {
     testImplementation(platform("org.junit:junitdd-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
     testImplementation 'org.springframework.security:spring-security-test'
+
+    // 암ㆍ복호화 관련 의존성 추가
+    implementation "com.github.ulisesbocchio:jasypt-spring-boot-starter:3.0.3"
 }
 
 tasks.named('test') {
