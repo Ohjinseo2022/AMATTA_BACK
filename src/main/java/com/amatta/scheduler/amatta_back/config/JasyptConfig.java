@@ -1,4 +1,4 @@
-package lotte.npd.mkt_back.config;
+package com.amatta.scheduler.amatta_back.config;
 
 import lombok.extern.slf4j.Slf4j;
 import org.jasypt.encryption.StringEncryptor;
