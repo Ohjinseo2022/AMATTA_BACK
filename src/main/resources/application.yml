@@ -61,3 +61,6 @@ springdoc:
     path: /swagger/docs
 
 
+jasypt:
+  encryptor:
+    bean: jasyptStringEncryptor
