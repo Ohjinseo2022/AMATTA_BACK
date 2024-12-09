@@ -15,11 +15,11 @@ class JasyptConfigTest {
 
     @Test
     public void encryptDecryptTest() {
-        String text = "jdbc:postgresql://124.63.21.91:10002/witn";//변경할 값
+        String text = "password";//변경할 값
 
         StandardPBEStringEncryptor encryptor = new StandardPBEStringEncryptor();
 
-        encryptor.setPassword("amatta");
+        encryptor.setPassword("jasypt_key");
         encryptor.setAlgorithm("PBEWithMD5AndDES");
 
         String encryptedText = encryptor.encrypt(text);
