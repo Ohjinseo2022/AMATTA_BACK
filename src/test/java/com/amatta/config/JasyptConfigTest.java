@@ -19,7 +19,7 @@ class JasyptConfigTest {
 
         StandardPBEStringEncryptor encryptor = new StandardPBEStringEncryptor();
 
-        encryptor.setPassword("jasypt_key");
+        encryptor.setPassword("amatta");
         encryptor.setAlgorithm("PBEWithMD5AndDES");
 
         String encryptedText = encryptor.encrypt(text);
