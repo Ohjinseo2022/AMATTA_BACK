@@ -15,7 +15,7 @@ class JasyptConfigTest {
 
     @Test
     public void encryptDecryptTest() {
-        String text = "amatta";//변경할 값
+        String text = "jdbc:postgresql://124.63.21.91:10002/witn";//변경할 값
 
         StandardPBEStringEncryptor encryptor = new StandardPBEStringEncryptor();
 
