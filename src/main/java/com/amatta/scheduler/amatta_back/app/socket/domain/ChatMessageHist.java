@@ -57,7 +57,7 @@ public class ChatMessageHist extends AbstractAuditingEntity<String> implements S
     private String attachDocId;
 
     @Comment("첨부 문서 정보 테이블")
-    @OneToOne @JoinColumn(name = "attach_doc_id",insertable = false, updatable = false,foreignKey = @ForeignKey(name = "fk_chatmessagehist_chatroommaster"))
+    @OneToOne @JoinColumn(name = "attach_doc_id",insertable = false, updatable = false,foreignKey = @ForeignKey(name = "fk_chatmessagehist_attachdocmaster"))
     private AttachDocMaster attachDocMaster;
 
     @Comment("채팅 메세지 전송 내용")
