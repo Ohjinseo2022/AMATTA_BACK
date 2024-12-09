@@ -17,23 +17,23 @@ spring:
   #    password:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://124.63.21.91:10002/witn
-    username: postgres
-    password: postgreswitn # ?? ???? ??? ??
+    url: ENC(ghiiKfqHW9E8kccbMfOh+T/NjHRUHOTTwUyu0rrRz/D0FvrEdtBwWCgY1JBLUHHlVZZVRwwODWE=)
+    username: ENC(ARS/2vrBNzXvLoQb2zfYHEkYOsENiHqr)
+    password: ENC(ARS/2vrBNzXvLoQb2zfYHEkYOsENiHqr) # ?? ???? ??? ??
 
   jpa:
     #    database-platform: org.hibernate.dialect.H2Dialect
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     database: postgresql
     hibernate:
-      ddl-auto: update        # DB ??? ?? (none, create, create-drop, update, validate)
+      ddl-auto: update        # DB 초기화 전략 (none, create, create-drop, update, validate)
     open-in-view: false
     properties:
       hibernate:
         #        dialect: org.hibernate.dialect.H2Dialect
         dialect: org.hibernate.dialect.PostgreSQLDialect
-        format_sql: true      # ?? ?? ?? (??)
-        show_sql: true        # ?? ?? ??
+        format_sql: true      #
+        show_sql: true        #
     show-sql: true
 
   config:

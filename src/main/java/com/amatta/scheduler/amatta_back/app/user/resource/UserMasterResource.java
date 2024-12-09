@@ -36,7 +36,6 @@ public class UserMasterResource {
     private static final String ENTITY_NAME = "UserMasterResource";
     @Operation(summary = "로그인 요청")
     @GetMapping("/profile")
-
     public ResponseEntity<?> getUserMe(HttpServletRequest request)throws Exception{
         log.info("get user profile start");
         /**
