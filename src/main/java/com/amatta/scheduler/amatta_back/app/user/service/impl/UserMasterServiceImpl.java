@@ -66,7 +66,11 @@ public class UserMasterServiceImpl implements UserMasterService {
 
     @Override
     public UserMasterDTO getUserMasterById(String userId) {
-        return userMasterRepository.findById(userId).map(userMaterMapper::toDto).get();
+        UserMaster userMaster = userMasterRepository.findById(userId).orElse(null);
+        if(userMaster != null){
+            return userMaterMapper.toDto(userMaster);
+        }
+        return null;
     }
 
     @Override

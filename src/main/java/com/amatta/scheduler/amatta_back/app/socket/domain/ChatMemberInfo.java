@@ -52,7 +52,7 @@ public class ChatMemberInfo extends AbstractAuditingEntity<String> implements Se
     @Comment("회원 관리 고유 ID")
     @ManyToOne
     @NotNull
-    @JoinColumn(name = "user_master_id" , insertable = false, updatable = false,foreignKey = @ForeignKey(name = "fk_tokenmanagementmaster_usermaster"))
+    @JoinColumn(name = "user_master_id" , insertable = false, updatable = false,foreignKey = @ForeignKey(name = "fk_chatmemberinfo_usermaster"))
     private UserMaster userMaster;
 
     @Comment("채팅방 참여 상태 코드")
